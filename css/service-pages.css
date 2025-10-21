@@ -177,6 +177,16 @@
     }
 }
 
+/* Classes pour remplacer les styles inline */
+.service-content-spaced {
+    margin-top: 4rem;
+}
+
+.cta-section-styled {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
 @media screen and (max-width: 768px) {
     .banner-content h1 {
         font-size: 2rem;
