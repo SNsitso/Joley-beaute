@@ -1,0 +1,2 @@
+Veuillez placer votre vidéo d'arrière-plan ici sous le nom 'bg-video.mp4'.
+Cette vidéo sera utilisée dans la section héro de votre site web.

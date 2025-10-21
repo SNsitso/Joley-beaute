@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Tarifs - Joley Beauté</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/service-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for tarifs page */
+        .tarif-image-simple {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            padding-top: 20px;
+        }
+        
+        .simple-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .tarifs-section {
+            padding: 6rem 5%;
+            background-color: var(--light-color);
+        }
+        
+        .tarifs-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+        
+        .tarifs-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .tarif-category {
+            margin-bottom: 4rem;
+        }
+        
+        .category-title {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .tarif-list {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .tarif-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .tarif-item:last-child {
+            border-bottom: none;
+        }
+        
+        .tarif-item:hover {
+            background-color: var(--light-bg);
+        }
+        
+        .tarif-name {
+            flex: 1;
+        }
+        
+        .tarif-name h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .tarif-name p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .tarif-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            padding-left: 2rem;
+            white-space: nowrap;
+        }
+        
+        .tarif-note {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .cta-section {
+            padding: 6rem 5%;
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-content p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .btn-light {
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+        }
+        
+        .btn-light:hover {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .tarif-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .tarif-price {
+                padding-left: 0;
+                margin-top: 1rem;
+            }
+            
+            .page-banner {
+                height: 200px;
+            }
+            
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Joley Beauté</a>
+            </div>
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="dermopigmentation.html">Dermopigmentation</a></li>
+                <li><a href="bb-glow.html">BB Glow</a></li>
+                <li><a href="lifting-colombien.html">Lifting Colombien</a></li>
+                <li><a href="blanchiment-dentaire.html">Blanchiment Dentaire</a></li>
+                <li><a href="lash-extension.html">Lash Extension</a></li>
+                <li><a href="tarifs.html" class="active">Nos Tarifs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tarifs Section -->
+    <section class="tarifs-section">
+        <div class="tarif-image-simple">
+            <img src="assets/tarifs.jpg" alt="Tarifs Joley Beauté" class="simple-image">
+        </div>
+        <div class="tarifs-intro">
+            <div class="section-title">
+                <h2>Nos Tarifs</h2>
+                <div class="separator"></div>
+            </div>
+            <p>Découvrez nos tarifs pour l'ensemble de nos prestations beauté. Nous vous proposons des services de qualité à des prix compétitifs.</p>
+        </div>
+        
+        <div class="tarifs-container">
+            <!-- Dermopigmentation -->
+            <div class="tarif-category">
+                <h3 class="category-title">Dermopigmentation</h3>
+                <div class="tarif-list">
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Dermopigmentation des Sourcils</h4>
+                            <p>Technique poil à poil, effet naturel</p>
+                        </div>
+                        <div class="tarif-price">250€</div>
+                    </div>
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Dermopigmentation des Lèvres</h4>
+                            <p>Contour et remplissage</p>
+                        </div>
+                        <div class="tarif-price">280€</div>
+                    </div>
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Retouche Sourcils</h4>
+                            <p>Dans les 2 mois suivant la première séance</p>
+                        </div>
+                        <div class="tarif-price">80€</div>
+                    </div>
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Retouche Lèvres</h4>
+                            <p>Dans les 2 mois suivant la première séance</p>
+                        </div>
+                        <div class="tarif-price">100€</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- BB Glow -->
+            <div class="tarif-category">
+                <h3 class="category-title">BB Glow</h3>
+                <div class="tarif-list">
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Séance BB Glow</h4>
+                            <p>Traitement unifiant et illuminateur</p>
+                        </div>
+                        <div class="tarif-price">80€</div>
+                    </div>
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Cure de 3 séances</h4>
+                            <p>Pour un résultat optimal</p>
+                        </div>
+                        <div class="tarif-price">200€</div>
+                    </div>
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Cure de 5 séances</h4>
+                            <p>Pour un résultat durable</p>
+                        </div>
+                        <div class="tarif-price">300€</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lifting Colombien -->
+            <div class="tarif-category">
+                <h3 class="category-title">Lifting Colombien</h3>
+                <div class="tarif-list">
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Lifting Colombien</h4>
+                            <p>Rehaussement et nutrition des cils</p>
+                        </div>
+                        <div class="tarif-price">60€</div>
+                    </div>
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Lifting + Teinture</h4>
+                            <p>Pour un regard encore plus intense</p>
+                        </div>
+                        <div class="tarif-price">75€</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blanchiment Dentaire -->
+            <div class="tarif-category">
+                <h3 class="category-title">Blanchiment Dentaire</h3>
+                <div class="tarif-list">
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Séance Blanchiment</h4>
+                            <p>Traitement professionnel sans peroxyde</p>
+                        </div>
+                        <div class="tarif-price">70€</div>
+                    </div>
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Cure de 3 séances</h4>
+                            <p>Pour un résultat éclatant</p>
+                        </div>
+                        <div class="tarif-price">180€</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lash Extension -->
+            <div class="tarif-category">
+                <h3 class="category-title">Lash Extension</h3>
+                <div class="tarif-list">
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Pose Complète Cil à Cil</h4>
+                            <p>Effet naturel</p>
+                        </div>
+                        <div class="tarif-price">80€</div>
+                    </div>
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Pose Complète Volume Russe</h4>
+                            <p>Effet intense et volumineux</p>
+                        </div>
+                        <div class="tarif-price">110€</div>
+                    </div>
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Remplissage Cil à Cil</h4>
+                            <p>À effectuer toutes les 3-4 semaines</p>
+                        </div>
+                        <div class="tarif-price">50€</div>
+                    </div>
+                    <div class="tarif-item">
+                        <div class="tarif-name">
+                            <h4>Remplissage Volume Russe</h4>
+                            <p>À effectuer toutes les 3-4 semaines</p>
+                        </div>
+                        <div class="tarif-price">70€</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tarif-note">
+                <p>* Les prix peuvent varier en fonction des besoins spécifiques. Une consultation préalable est recommandée pour établir un devis personnalisé.</p>
+                <p>* Moyens de paiement acceptés : espèces, carte bancaire.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" style="background-color: var(--light-bg); color: var(--text-color);">
+        <div class="cta-content">
+            <h3>Prête à Prendre Rendez-vous ?</h3>
+            <p>Contactez-nous dès maintenant pour réserver votre séance ou pour toute question concernant nos prestations.</p>
+            <a href="contact.html" class="btn">Prendre Rendez-vous</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Joley Beauté</h4>
+                <p>Eyebrow Expert Since 2008</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="dermopigmentation.html">Dermopigmentation</a></li>
+                    <li><a href="bb-glow.html">BB Glow</a></li>
+                    <li><a href="lifting-colombien.html">Lifting Colombien</a></li>
+                    <li><a href="blanchiment-dentaire.html">Blanchiment Dentaire</a></li>
+                    <li><a href="lash-extension.html">Lash Extension</a></li>
+                    <li><a href="tarifs.html">Nos Tarifs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Menton - Roquebrune Cap-Martin - Monaco - Nice</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+33755354297">+33 7 55 35 42 97</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:emilie.zagroski.pro@gmail.com">emilie.zagroski.pro@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/joleybeaute?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Joley Beauté. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
